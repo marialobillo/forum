@@ -65,7 +65,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'en',
+    'fallback_locale' => 'es',
 
     /*
     |--------------------------------------------------------------------------
@@ -143,10 +143,9 @@ return [
         Forum\Providers\AppServiceProvider::class,
         Forum\Providers\EventServiceProvider::class,
         Forum\Providers\RouteServiceProvider::class,
-        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider,
-        Cviebrock\EloquentSluggable\SluggableServiceProvider,
-        Illuminate\HtmlSeviceProvider,
-
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+        'Cviebrock\EloquentSluggable\SluggableServiceProvider',
+        'Illuminate\Html\HtmlServiceProvider',
     ],
 
     /*
@@ -194,8 +193,8 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
-        'Form'      => Illuminate\Html\FormFacade,
-        'Html'      => Illuminate\Html\HtmlFacade,
+        'Form'=> 'Illuminate\Html\FormFacade',
+        'HTML'=> 'Illuminate\Html\HtmlFacade',
 
     ],
 
